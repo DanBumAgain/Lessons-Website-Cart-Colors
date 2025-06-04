@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.body {
+    font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.header {
+    background-color: #E77C3E;
+    padding: 30px;
+    
+}
+
+a {
+    color: #fff;
+    border-style: none;
+    text-align: center;
+    text-decoration: none;
+    padding-right: 30px;
+    font-size: 20px;
+}
+
+.cart__element {
+    padding: 100px;
+}
+
+.active__menu {
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.buttons {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    background: #E77C3E;
+    border-style: none;
+    font-weight: 600;
+    font-size: 30px;
+    color: #fff;
+    margin: 10px;
+    width: 250px;
+    height: 80px;
+    border-radius: 5px;
+    transition: 50ms;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button:hover {
+    background: #f59f6e;
+}
+
+.input {
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.input__text {
+    font-size: 30px;
+    width: 500px;
+    height: 80px;
+    border-radius: 5px;
+}
+
+.footer__links {
+    background-color: #464646;
+    padding: 30px;
+    margin-top: 200px;
+}
+
+.color__changer, .rndcolorsmain {
+    padding: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.color__info__5, .rndcolorr {
+    font-size: 24px;
+    padding-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    width: 500px; 
+    flex-direction: column;
+    text-align: center;
+}
+
+.colors__rnd {
+    padding: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media (max-width: 980px) {
+
+    .buttons {
+        margin-left: auto;
+        margin-right: auto;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .button { 
+        font-size: 24px;
+    }
+
+    .color__info__5, .rndcolorr {
+        width: 300px; 
+        font-size: 20px;
+    }
+}
+
+    
+
+
+
+ 
+
+
+
+
+
+
+
+ /* Another versions 
+
+ css 
+ border-bottom: 1px #fff; 
+ text-transform: uppercase;
+ background-color: white;
+
+    width: 800px; 
+    /* flex-direction: column; */
+    /* text-align: center;
+ 
+ test colors changer rnd not work
+ <div class="colors__rnd">
+    <button class="button" onclick="changeColor()">Change color</button>
+    <div class="color__info__5" id="colorInfo">background-color: none</div>
+    </div>
+   
+    <script>
+        function changeColor(){
+            document.body.style.backgroundColor=
+            'rgb('+ Math.round(Math.random()*255)+ 
+            ',' + Math.round(Math.random()*255)+
+            ',' + Math.round(Math.random()*255) +')';
+        }
+        document.getElementById("colorInfo").innerText = `background-color: ${rgb} (format: ${rgb})`;
+
+    </script>  
+ 
+
+        Ne rabotaet 2 rabotaet no ne RGB nado i ne v log
+
+         <a class="button" href="#" id="main-button" onclick="func_button()"> change ColorsRnd</a>
+    
+    <script>
+        function func_button() {
+            const body = document.querySelector('body')
+
+            var first_number = Math.floor(Math.random() * (255 - 1 + 1)) + 1;
+            var second_number = Math.floor(Math.random() * (255 - 1 + 1)) + 1;
+            var third_number = Math.floor(Math.random() * (255 - 1 + 1)) + 1;
+            // console.log(first_number);
+            // console.log(second_number);
+            // console.log(third_number);
+
+            var rgb = 'rgb(' + first_number +','+ second_number + ',' + third_number +')';
+            body.style.backgroundColor = rgb;
+            console.log('RGB - ' + first_number +','+second_number + ',' + third_number);
+        }
+
+    </script>
+
+    /* ==== Another sctipt version cart
+<script>
+    
+        let plus = document.querySelector('#plus')
+        let minus = document.querySelector('#minus')
+        let btnClear = document.querySelector('#reset')
+        let input = document.querySelector('input')
+    
+        plus.addEventListener('click', function(){
+        input.value = Number (input.value) +1;
+        })
+
+        minus.addEventListener('click', function(){
+            if (Number (input.value) > 0) {
+        input.value = Number (input.value) -1;
+        }   else {
+            input.value = 0
+        }
+        })
+
+        btnClear.addEventListener('click', () => {
+        input.value = '0';
+        });
+    </script> 
+
+    function randomColor() {
+            const hex = `#${Math.floor(Math.random()*16777215).toString(16).padStart(6, '0')}`;
+            document.body.style.backgroundColor = hex;
+            document.getElementById("colorInfo").innerText = `background-color: ${hex} (format: hex)`;
+        }
+*/

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="body">
+    <div class="container">
+        <div class="header">
+            <a href="/Cart.html">Cart</a>
+            <a href="/Colors5.html" class="active__menu">Colors 5</a>
+            <a href="/ColorsRnd.html">Colors Random</a>
+        </div>
+    </div>
+
+    <div class="color__changer">
+        <button class="button color 5" onclick="setColor()">
+            Change Color</button>
+
+        <div class="color__info__5" id="colorInfo">background-color: 
+            none</div>
+    </div>
+
+    <script>
+    
+    const colors = [
+        {value: "red", format: "red name"},
+        {value: "#00ff00", format: "green hex"},
+        {value: "rgb(0, 10, 255)", format: "blue rgb"},
+        {value: "hsl(60, 100%, 60%)", format: "yellow hsl"},
+        {value: "hwb(296 19.9% 19.1%)", format: "purple hwb"}
+    ];
+
+    function setColor() {
+        const c = colors[Math.floor(Math.random() * colors.length)];
+        document.body.style.backgroundColor = c.value;
+        document.getElementById("colorInfo")
+        .innerText = `background-color: 
+        ${c.value} (format: ${c.format})`;
+    }
+
+    </script>
+
+</body>
+
+<footer>
+    <div class="container">
+        <div class="footer__links">
+        <a href="#">Contact</a>
+        <a href="#"> Social</a>
+        <a href="#"> About</a>
+        <a href="#"> Privacy</a>
+    </div>
+    </div>
+</footer>
+</html>
